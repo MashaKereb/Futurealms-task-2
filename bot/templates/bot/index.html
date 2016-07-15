@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Chat bot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="caption">Let's speak!</div>
+    
+    <input type="text" placeholder="Your message..." id="message" autofocus>
+    <input type="button" value="Send" id="send_but">
+    
+    <ul id="message_box">
+        <li>Chat bot : {{ message }}</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
